@@ -1,20 +1,21 @@
 org 0h7c00
 bits 16
 
-print:
-    push bx
+start:
+    jmp main
 
-.repeat:
+print:
+    pusha
     mov al, [bx]
     cmp al, 0
     je .done
     mov ah, 0h0E
     int 0h10
-    add bx, 1
-    jmp .repeat
+    inc bx
+    jmp print
 
 .done:
-    pop bx
+    popa
     ret
 
 main:
