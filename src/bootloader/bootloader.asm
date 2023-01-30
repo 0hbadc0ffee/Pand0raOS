@@ -6,27 +6,27 @@ jmp short main
 nop
 
 ; => bios paramater block
-db 'MSWIN4.1'               ; oem_identifier
-dw  512                     ; bytes per sector
-db  1                       ; sector per cluster
-dw  1                       ; reserved sectors
-db  2                       ; fat count
-dw  0E0h                    ; dir entries count
-dw  2880                    ; total sectors
-db  0F0h                    ; media descriptor
-dw  9                       ; sectors per fat
-dw  18                      ; sectors per track
-dw  2                       ; heads
-dd  0                       ; hidden sectors
-dd  0                       ; large sector count
+oem: db 'MSWIN4.1'               ; oem_identifier
+bps: dw  512                     ; bytes per sector
+spc: db  1                       ; sector per cluster
+rss: dw  1                       ; reserved sectors
+ftc: db  2                       ; fat count
+drc: dw  0E0h                    ; dir entries count
+tts: dw  2880                    ; total sectors
+mdd: db  0F0h                    ; media descriptor
+spf: dw  9                       ; sectors per fat
+spt: dw  18                      ; sectors per track
+hed: dw  2                       ; heads
+hds: dd  0                       ; hidden sectors
+lsc: dd  0                       ; large sector count
 
 ; => extended boot record
-db  0                       ; drive number
-db  0
-db  0h29                    ; signature
-db  0h13, 0h43, 0h74, 0h21  ; volume id
-db  'Pand0raOS  '           ; volume label
-db  'FAT12   '              ; system label
+drn: db  0                       ; drive number
+     db  0
+sig: db  0h29                    ; signature
+vid: db  0h13, 0h43, 0h74, 0h21  ; volume id
+sid: db  'Pand0raOS  '           ; volume label
+slb: db  'FAT12   '              ; system label
 
 print:
     pusha
