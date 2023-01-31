@@ -23,7 +23,7 @@ Once everything՚ s installed, run this command to generate the build files:
 make
 ```
 
-To boot the operating i՚ve made a simple shell script so run this command:
+To boot the operating system, i՚ve made a simple shell script so run this command:
 
 ```bash
 ./boot_os.sh
