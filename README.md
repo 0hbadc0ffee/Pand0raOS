@@ -15,18 +15,18 @@ ___
 
 To get started, run this command:
 ```bash
-sudo apt install nasm make qemu
+$ sudo apt install nasm make qemu
 ```
 Once everything՚ s installed, run this command to generate the build files:
 
 ```bash
-make
+$ make
 ```
 
 To boot the operating system, i՚ve made a simple shell script so run this command:
 
 ```bash
-./boot_os.sh
+$ ./boot_os.sh
 ```
 ___
 
